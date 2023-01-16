@@ -31,7 +31,7 @@ function App() {
                         <Route path="/login" element={<LoginPage/>}/>
                         <Route path="/signup" element={<SignUpPage/>}/>
                         <Route path="/reset" element={<ForgotPassword/>}/>
-                        <Route path="/about" element={<AboutPage/>}/>
+                        <Route path="/AboutPage.js" element={<AboutPage/>}/>
                         <Route path="/" element={<LandingPage/>}/>
                         <Route path="/*" element={<NotFoundPage/>}/>
                     </Routes>
