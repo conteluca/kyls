@@ -4,7 +4,7 @@ import {createTheme} from '@mui/material/styles';
 import {blue, green,} from '@mui/material/colors';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {AuthProvider} from "./auth";
-import {ForgotPassword, LandingPage, LoginPage, SignUpPage} from "./pages";
+import {LandingPage} from "./pages";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -28,10 +28,7 @@ function App() {
             <BrowserRouter>
                 <AuthProvider>
                     <Routes>
-                        <Route path="/login" element={<LoginPage/>}/>
-                        <Route path="/signup" element={<SignUpPage/>}/>
-                        <Route path="/reset" element={<ForgotPassword/>}/>
-                        <Route path="/AboutPage.js" element={<AboutPage/>}/>
+                        <Route path="/about" element={<AboutPage/>}/>
                         <Route path="/" element={<LandingPage/>}/>
                         <Route path="/*" element={<NotFoundPage/>}/>
                     </Routes>

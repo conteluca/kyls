@@ -1,6 +1,5 @@
-import {Avatar, Box, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText} from "@mui/material";
+import {Box, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText} from "@mui/material";
 import {InboxSharp, MailSharp} from "@mui/icons-material";
-import {useAuth} from "../auth";
 
 const CustomDrawer = ({anchor, drawerState, toggleDrawer,items}) => {
     const list = (anchor) => (
