@@ -1,13 +1,12 @@
 import React from 'react';
-import {Button} from "@mui/material";
-import {useNavigate} from "react-router-dom";
+import FeatureOne from "../layouts/sections/features/FeatureOne";
+import HeaderTwo from "../layouts/sections/headers/HeaderTwo";
 
 const AboutPage = () => {
-    const navigate = useNavigate();
     return (
         <div>
-            <h1>this is about</h1>
-            <Button onClick={() => navigate('/')}>Back</Button>
+            <HeaderTwo/>
+            <FeatureOne/>
         </div>
     );
 };

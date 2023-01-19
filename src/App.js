@@ -1,39 +1,23 @@
 import React from "react";
-import {ThemeProvider} from "@mui/material";
-import {createTheme} from '@mui/material/styles';
-import {blue, green,} from '@mui/material/colors';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {CssBaseline, ThemeProvider} from "@mui/material";
+import {Route, Routes} from "react-router-dom";
 import {AuthProvider} from "./auth";
-import {LandingPage} from "./pages";
-import AboutPage from "./pages/AboutPage";
-import NotFoundPage from "./pages/NotFoundPage";
-
-const theme = createTheme({
-    palette: {
-        primary: {
-            main: blue[800],
-        },
-        secondary: {
-            main: green[500],
-        },
-        white: {main: '#fff',},
-        dark: {main: '#000',}
-    },
-});
+import {AboutPage, HomePage, NotFoundPage, ProfilePage} from "./pages";
+import theme from "./assets/theme";
 
 
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <BrowserRouter>
-                <AuthProvider>
-                    <Routes>
-                        <Route path="/about" element={<AboutPage/>}/>
-                        <Route path="/" element={<LandingPage/>}/>
-                        <Route path="/*" element={<NotFoundPage/>}/>
-                    </Routes>
-                </AuthProvider>
-            </BrowserRouter>
+            <CssBaseline/>
+            <AuthProvider>
+                <Routes>
+                    <Route path="/about" element={<AboutPage/>}/>
+                    <Route path="/profile" element={<ProfilePage/>}/>
+                    <Route path="/" element={<HomePage/>}/>
+                    <Route path="/*" element={<NotFoundPage/>}/>
+                </Routes>
+            </AuthProvider>
         </ThemeProvider>
     );
 }

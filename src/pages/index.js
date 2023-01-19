@@ -1,4 +1,7 @@
-import LandingPage from "./LandingPage";
+import HomePage from "./HomePage";
 import AboutPage from "./AboutPage";
+import NotFoundPage from "./NotFoundPage";
+import ProfilePage from "./ProfilePage";
 
-export {LandingPage, AboutPage};
+
+export {HomePage, AboutPage,NotFoundPage,ProfilePage};
